@@ -1,62 +1,73 @@
+/* font-family: 'Open Sans', sans-serif; */
+
 body {
-    background-image: url(images/gradient.png)
+    background-image: url(images/gradient.png);
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    padding: 10px;
 }
 
 h1 {
     color:white;
 }
 
-.text-box {
-    position: relative;
-    overflow: hidden;
-    display:flex;
-    height: 4rem;
+.title {
+    color: #b2d9e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+
 }
 
-.label,
-.label-sm {
+.textbox {
+    top: 300px;
+    left: 450px;
+    position: relative;
+    display: flex;
+    height: 4rem;
+    width: 400px;
+    border: 0;
+    border-radius: 4rem;
+    background-color: rgba(197, 193, 193, 0.219);
+;
+}
+
+span {
     position: absolute;
-    top: 50%;
-    color: #7b7684;
+    top: 0.5rem;
+    left: 0.5rem;
+    display: grid;
+    place-items: center;
+    height: 3rem;
+    width: 6rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: inherit;
+    background: #3a8ced;
+    color: #ffffff;
     pointer-events: none;
     transition: all 0.35s;
 }
 
-.label {
-    left: 0;
-    transform: translate(0, -50%);
-}
-
-.label-sm {
-    right: 0;
-    transform: translate(3rem, -50%);
-    width: 6rem;
-    font-size:0.75rem;
-    text-align: right;
-    opacity: 0;
-    transition: all 0.35s;
-}
-
 input {
+    flex: 1 1 auto;
+    padding-left: 6.5rem;
     height: inherit;
-    width: 16rem;
     border: 0;
-    border-bottom: 2px solid #2e2a33;
     outline: none;
     background: transparent;
-    color: #f7f7f7;
     font-size: 1rem;
+    text-indent: 0.625rem;
     transition: all 0.35s;
 }
 
-input:focus { border-bottom-color: #1ac0a2; }
-
-input:focus ~ .label {
-    opacity: 0;
-    transform: translate(-3rem, -50%);
+input, select, textarea{
+    color: #ffffff;
 }
 
-input:focus ~ .label-sm {
-    opacity: 1;
-    transform: translate(0, -50%);
+input::placeholder { color: #9b9ba5;}
+
+input:focus { transform: translateX(-6rem);}
+
+input:focus ~ span {
+    transform: translateY(-4rem);
 }
