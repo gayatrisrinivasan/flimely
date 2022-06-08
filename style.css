@@ -27,7 +27,7 @@ h1 {
     width: 400px;
     border: 0;
     border-radius: 4rem;
-    background-color: rgba(197, 193, 193, 0.219);
+    background-color: lightgray;
 ;
 }
 
@@ -58,10 +58,11 @@ input {
     font-size: 1rem;
     text-indent: 0.625rem;
     transition: all 0.35s;
+   
 }
 
 input, select, textarea{
-    color: #ffffff;
+    color: black;
 }
 
 input::placeholder { color: #9b9ba5;}
