@@ -7,8 +7,13 @@
    <!-- CSS stylesheet -->
     <link rel="stylesheet" href="home-style.css">
     <title>Document</title>
+    
+</head>
 </head>
 <body>
-    
+    <p id = "titl"></p>
 </body>
+<script >
+    document.getElementById("titl").innerHTML = "Hello " + localStorage.getItem("username");
+</script>
 </html>

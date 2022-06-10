@@ -31,6 +31,7 @@ h1 {
 
 .name {
     color: #00ADCC;
+   
 }
 
 /* First Name TextBox */
@@ -44,6 +45,10 @@ h1 {
     border: 0;
     border-radius: 4rem;
     background-color: lightgray;
+    animation-name: fadeInAnimation;
+    animation-delay: 150ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 #fnText {
@@ -107,6 +112,10 @@ input:focus ~ span {
     background: #ababac49;
     background-size: 400%;
     color: #ffffff;
+    animation-name: fadeInAnimation;
+    animation-delay: 150ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 .goButton:hover {
@@ -159,9 +168,22 @@ input:focus ~ span {
     background: #ababac49;
     background-size: 400%;
     color: #ffffff;
+    animation-name: fadeInAnimation;
+    animation-delay: 150ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 .skipButton:hover {
     border: 1px solid  #ffffff;
     cursor:pointer;
         }
+
+@keyframes fadeInAnimation {
+    0% {
+         opacity: 0;
+        }
+    100% {
+         opacity: 1;
+        }
+}
