@@ -1,0 +1,167 @@
+/* 
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif; 
+*/
+
+html, body {
+    margin: 0;
+    height: 100%; 
+    overflow: hidden
+}
+
+body {
+    background-color: #07141D;
+    margin: auto;
+    padding: 10px;
+}
+
+h1 {
+    color:white;
+}
+
+/* Title */
+.title {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    left: 390px;
+    top: 30px;
+    text-align: left;
+    font-size: 70px;
+}
+
+.name {
+    color: #00ADCC;
+}
+
+/* First Name TextBox */
+.textbox {
+    top: 85px;
+    left: 500px;
+    position: relative;
+    display: flex;
+    height: 5rem;
+    width: 300px;
+    border: 0;
+    border-radius: 4rem;
+    background-color: lightgray;
+}
+
+#fnText {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    display: grid;
+    place-items: center;
+    height: 5rem;
+    width: 8rem;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 400;
+    font-size: 1.2rem;
+    border-radius: inherit;
+    background: #00adcc;
+    color: #ffffff;
+    pointer-events: none;
+    transition: all 0.35s;
+}
+
+input {
+    flex: 1 1 auto;
+    padding-left: 6.5rem;
+    height: inherit;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font-size: 1.3rem;
+    text-indent: 2rem;
+    transition: all 0.35s;
+   
+}
+
+input, select, textarea{
+    color: black;
+}
+
+input::placeholder { color: #9b9ba5;}
+
+input:focus { transform: translateX(-6rem);}
+
+input:focus ~ span {
+    transform: translateY(-5.5rem);
+}
+
+/* Go Button */
+.goButton {
+    position: relative;
+    left: 700px;
+    top: 130px;
+    cursor:pointer;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 200;
+    border-radius: 1.5rem;
+    border-width: 1px;
+    border-color: #7e7e7e;
+    border-style: solid;
+    background: #ababac49;
+    background-size: 400%;
+    color: #ffffff;
+}
+
+.goButton:hover {
+    border: 1px solid  #ffffff;
+    cursor:pointer;
+        }
+
+.goButton:hover::before {
+    transform: scaleX(1);
+}
+
+.goButton-content {
+    position: relative;
+    z-index: 1;
+}
+
+.goButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+        83.2deg,
+        rgb(58, 127, 173) 10.8%,
+        rgb(0, 173, 204) 94.35%
+    );
+    transition: all 0.475s;
+}
+
+/* Skip Button */
+.skipButton {
+    position: relative;
+    left: 400px;
+    top: 130px;
+    cursor:pointer;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 200;
+    border-radius: 1.5rem;
+    border-color: #7e7e7e;
+    border-width: 1px;
+    border-style: solid;
+    background: #ababac49;
+    background-size: 400%;
+    color: #ffffff;
+}
+
+.skipButton:hover {
+    border: 1px solid  #ffffff;
+    cursor:pointer;
+        }
