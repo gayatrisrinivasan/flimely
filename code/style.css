@@ -23,10 +23,10 @@ h1 {
 .title {
     font-family: 'Open Sans', sans-serif;
     position: relative;
-    left: 390px;
+    left: 450px;
     top: 30px;
     text-align: left;
-    font-size: 70px;
+    font-size: 50px;
 }
 
 .name {
@@ -36,63 +36,54 @@ h1 {
 
 /* First Name TextBox */
 .textbox {
-    top: 85px;
-    left: 500px;
     position: relative;
-    display: flex;
-    height: 5rem;
-    width: 300px;
-    border: 0;
-    border-radius: 4rem;
-    background-color: lightgray;
-    animation-name: fadeInAnimation;
-    animation-delay: 150ms;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-
-#fnText {
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-    display: grid;
-    place-items: center;
-    height: 5rem;
-    width: 8rem;
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 400;
-    font-size: 1.2rem;
-    border-radius: inherit;
-    background: #00adcc;
-    color: #ffffff;
-    pointer-events: none;
-    transition: all 0.35s;
+    top: 70px;
+    left: 490px;
 }
 
 input {
-    flex: 1 1 auto;
-    padding-left: 6.5rem;
-    height: inherit;
-    border: 0;
-    outline: none;
-    background: transparent;
-    font-size: 1.3rem;
-    text-indent: 2rem;
-    transition: all 0.35s;
-   
-}
-
-input, select, textarea{
+    width: 20rem;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #585858;
     color: black;
-}
+  }
+  
+  .validation {
+    position: absolute;
+    bottom: 3.5rem;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding: 0 0.5rem;
+    opacity: 0;
+    transform: translateY(0.75rem);
+    border-radius: 1.5rem;
+    background: #fd4444;
+    color: #f9f9f9;
+    transition: all 0.35s;
+  }
 
-input::placeholder { color: #9b9ba5;}
-
-input:focus { transform: translateX(-6rem);}
-
-input:focus ~ span {
-    transform: translateY(-5.5rem);
-}
+  .validation::after {
+      content: "";
+      position: absolute;
+      left: 15px;
+      bottom: -2px;
+      width: 4px;
+      height: 4px;
+      transform: rotate(45deg);
+      background: inherit;
+  }
+  
+  input:valid{
+    border-color: #55d688;
+  }
+  input:invalid ~ .validation {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 /* Go Button */
 .goButton {
