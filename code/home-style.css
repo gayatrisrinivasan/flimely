@@ -10,8 +10,8 @@ body {
     font-size: 70px;
     color: coral;
     animation-name: fadeInAnimation;
-    animation-delay: 100ms;
-    animation-duration: 1s;
+    animation-delay: 10ms;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 @keyframes fadeInAnimation {

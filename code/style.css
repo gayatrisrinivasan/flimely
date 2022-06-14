@@ -52,6 +52,7 @@ input {
   }
   
   .validation {
+    font-family: 'Open Sans', sans-serif;
     position: absolute;
     bottom: 3.5rem;
     display: flex;
